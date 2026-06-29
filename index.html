@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moonlight Staff</title>
+    <!-- Tipografía moderna y tecnológica -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     
     <style>
-        /* Estilo Cómic Urbano / Novela Gráfica */
+        /* Estilo Dark Neon / Cyberpunk basado en NANZZAPI */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -17,185 +18,233 @@
         }
 
         body {
-            background-color: #1a1a1a; /* Fondo oscuro */
-            background-image: linear-gradient(45deg, #111 25%, transparent 25%), 
-                              linear-gradient(-45deg, #111 25%, transparent 25%), 
-                              linear-gradient(45deg, transparent 75%, #111 75%), 
-                              linear-gradient(-45deg, transparent 75%, #111 75%);
-            background-size: 20px 20px;
-            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
-            font-family: 'Oswald', sans-serif;
-            color: #ffffff;
-            padding: 30px 20px;
+            background-color: #0b0813; /* Fondo ultra oscuro con matiz morado */
+            background-image: radial-gradient(#151026 1px, transparent 1px);
+            background-size: 24px 24px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #94a3b8;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
         }
 
-        .comic-panel {
-            max-width: 750px;
+        /* Contenedor Principal superior */
+        .main-container {
+            max-width: 650px;
             width: 100%;
-            background: #262626;
-            border: 5px solid #ffffff;
-            box-shadow: 12px 12px 0px #000000;
-            padding: 40px 30px;
-            margin: 20px 0;
-            position: relative;
+            margin-top: 20px;
         }
 
-        /* Encabezado estilo viñeta de impacto */
-        header {
-            text-align: center;
-            background: #e63946; /* Rojo de acción */
-            color: #ffffff;
-            border: 4px solid #000000;
-            padding: 25px 15px;
-            margin-bottom: 40px;
-            box-shadow: 6px 6px 0px #000000;
-            transform: skew(-2deg);
+        /* Banner de Ojos Estilo Manga/Cómic superior */
+        .banner-manga {
+            width: 100%;
+            height: 220px;
+            border-radius: 16px;
+            border: 1px solid #231d3c;
+            overflow: hidden;
+            position: relative;
+            background: #000;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Efecto SVG simulando los ojos del panel anime con tonos morados */
+        .banner-svg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Panel de Información Principal */
+        .info-panel {
+            background: rgba(18, 14, 34, 0.75);
+            border: 1px solid #231d3c;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(8px);
+        }
+
+        .tagline {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #a855f7; /* Púrpura neón */
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .tagline::before {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 2px;
+            background: #a855f7;
         }
 
         h1 {
-            font-family: 'Bangers', cursive;
-            font-size: 3.5rem;
-            letter-spacing: 3px;
-            text-shadow: 4px 4px 0px #000000;
-            line-height: 1.1;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            font-weight: 700;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+            margin-bottom: 12px;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            background: #000000;
-            display: inline-block;
-            padding: 6px 15px;
-            margin-top: 15px;
-            border: 2px solid #ffffff;
         }
 
-        /* Secciones tipo bloques de historieta */
-        .comic-section {
-            margin-bottom: 40px;
+        h1 span {
+            color: #a855f7; /* Resaltado morado */
         }
 
+        .description {
+            font-size: 0.95rem;
+            color: #64748b;
+            margin-bottom: 28px;
+            font-weight: 400;
+        }
+
+        /* Títulos de categorías internos */
         .section-title {
-            font-family: 'Bangers', cursive;
-            font-size: 2.2rem;
-            letter-spacing: 1px;
-            color: #00ffffff; /* Cyan neón estilo cómic moderno */
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.85rem;
             text-transform: uppercase;
-            border-bottom: 4px dashed #ffffff;
-            padding-bottom: 5px;
-            margin-bottom: 25px;
-            text-shadow: 2px 2px 0px #000000;
+            letter-spacing: 1.5px;
+            color: #cbd5e1;
+            margin: 25px 0 15px 0;
+            font-weight: 700;
         }
 
-        .grid-bubbles {
-            display: block;
-            text-align: center;
+        /* Grid de Botones tipo Cápsula */
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
         }
 
-        /* Burbujas de texto angulares / estilo diálogo de acción moderno */
-        .bubble-btn {
-            display: inline-block;
+        /* Botones Estilo Contorno Tecnológico */
+        .btn-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-decoration: none;
+            color: #94a3b8;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: rgba(30, 25, 53, 0.3);
+            border: 1px solid #2e264f;
+            border-radius: 8px;
+            padding: 14px 16px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-link:hover {
+            color: #ffffff;
+            border-color: #a855f7;
+            background: rgba(168, 85, 247, 0.1);
+            box-shadow: 0 0 15px rgba(168, 85, 247, 0.15);
+            transform: translateY(-1px);
+        }
+
+        /* Botón Destacado de Comunidad Inferior */
+        .btn-featured {
+            grid-column: span 2;
+            background: #a855f7;
+            border: 1px solid #c084fc;
             color: #ffffff;
             font-weight: 700;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            background: #000000;
-            border: 3px solid #ffffff;
-            padding: 14px 28px;
-            margin: 12px;
-            position: relative;
-            box-shadow: 5px 5px 0px #000000;
-            transition: all 0.1s ease;
-            max-width: 100%;
+            box-shadow: 0 4px 20px rgba(168, 85, 247, 0.3);
         }
 
-        .bubble-btn:hover {
-            transform: translate(-3px, -3px);
-            box-shadow: 8px 8px 0px #e63946;
-            background: #ffffff;
-            color: #000000;
-            border-color: #000000;
+        .btn-featured:hover {
+            background: #b55fe6;
+            border-color: #d8b4fe;
+            color: #ffffff;
+            box-shadow: 0 4px 25px rgba(168, 85, 247, 0.45);
         }
 
-        /* Pequeño rabillo angular inferior simulando bocadillo de diálogo serio */
-        .bubble-btn::after {
-            content: '';
-            position: absolute;
-            bottom: -12px;
-            left: 25px;
-            border-width: 12px 12px 0 0;
-            border-style: solid;
-            border-color: #ffffff transparent;
-            display: block;
-            width: 0;
-        }
-
-        .bubble-btn:hover::after {
-            border-color: #000000 transparent;
-        }
-
-        /* Responsive */
-        @media (max-width: 600px) {
-            h1 { font-size: 2.5rem; }
-            .comic-panel { padding: 20px 15px; }
-            .bubble-btn { display: block; margin: 20px auto; }
+        /* Adaptación para pantallas pequeñas */
+        @media (max-width: 500px) {
+            h1 { font-size: 1.9rem; }
+            .button-grid { grid-template-columns: 1fr; }
+            .btn-featured { grid-column: span 1; }
+            .banner-manga { height: 160px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="comic-panel">
+    <div class="main-container">
         
-        <header>
-            <h1>Bienvenido/a a Moonlight Staff</h1>
-            <div class="subtitle">Comunidad llena de creadores de bots</div>
-        </header>
+        <!-- BANNER SUPERIOR: ESTILO OJOS MANGA/ACCION -->
+        <div class="banner-manga">
+            <!-- Gráfico incrustado simulando el panel de ojos oscuros e impactantes del archivo 1000095553.jpg -->
+            <svg class="banner-svg" viewBox="0 0 800 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="800" height="250" fill="#05030a"/>
+                <path d="M-50 120L250 80L500 130L850 70V160L600 110L300 170L-50 110Z" fill="#140e28"/>
+                <!-- Siluetas y rasgaduras estilizadas -->
+                <path d="M150 70C200 95 240 95 280 75" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+                <path d="M520 70C570 95 610 95 650 75" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+                <!-- Brillo de ojos neón -->
+                <circle cx="215" cy="115" r="16" fill="#a855f7" filter="drop-shadow(0px 0px 12px #c084fc)"/>
+                <circle cx="215" cy="115" r="6" fill="#ffffff"/>
+                <circle cx="585" cy="115" r="16" fill="#a855f7" filter="drop-shadow(0px 0px 12px #c084fc)"/>
+                <circle cx="585" cy="115" r="6" fill="#ffffff"/>
+                <!-- Rasgaduras estilo cómic/manga -->
+                <path d="M0 60L180 85L320 40L480 75L620 35L800 65M800 180L640 150L450 195L310 160L140 185L0 155" stroke="#ffffff" stroke-width="3"/>
+            </svg>
+        </div>
 
-        <div class="comic-section">
+        <!-- PANEL CENTRAL DE CONTENIDO -->
+        <div class="info-panel">
+            <div class="tagline">Moonlight Project</div>
+            <h1>Bienvenido/a a <br><span>Moonlight Staff</span></h1>
+            <p class="description">Comunidad llena de creadores de bots</p>
+
+            <!-- SOPORTE -->
             <div class="section-title">Soporte</div>
-            <div class="grid-bubbles">
-                <a href="https://wa.me/529992042946?text=starlyn" target="_blank" class="bubble-btn">
+            <div class="button-grid">
+                <a href="https://wa.me/529992042946?text=starlyn" target="_blank" class="btn-link">
                     WhatsApp (Starlyn)
                 </a>
-                <a href="https://www.instagram.com/kob.danonino?igsh=djJid2djZzVrb2Zs" target="_blank" class="bubble-btn">
+                <a href="https://www.instagram.com/kob.danonino?igsh=djJid2djZzVrb2Zs" target="_blank" class="btn-link">
                     Instagram
                 </a>
-                <a href="https://www.tiktok.com/@kob.danonino?_r=1&_t=ZS-97cnppyX1MO" target="_blank" class="bubble-btn">
+                <a href="https://www.tiktok.com/@kob.danonino?_r=1&_t=ZS-97cnppyX1MO" target="_blank" class="btn-link" style="grid-column: span 2;">
                     TikTok
                 </a>
             </div>
-        </div>
 
-        <div class="comic-section">
-            <div class="section-title">Grupos Oficiales</div>
-            <div class="grid-bubbles">
-                <a href="https://chat.whatsapp.com/F41976tzldkDSA6gtTj5sT" target="_blank" class="bubble-btn">
-                    Comunidad Moonlight Staff
-                </a>
-            </div>
-        </div>
-
-        <div class="comic-section">
+            <!-- CANALES OFICIALES -->
             <div class="section-title">Canales Oficiales</div>
-            <div class="grid-bubbles">
-                <a href="https://whatsapp.com/channel/0029Vb7vqNDCsU9MnOn8UN0U" target="_blank" class="bubble-btn">
+            <div class="button-grid">
+                <a href="https://whatsapp.com/channel/0029Vb7vqNDCsU9MnOn8UN0U" target="_blank" class="btn-link">
                     Canal Moonlight
                 </a>
-                <a href="https://whatsapp.com/channel/0029Vb6qIht5q08ZMPgVrA1y" target="_blank" class="bubble-btn">
+                <a href="https://whatsapp.com/channel/0029Vb6qIht5q08ZMPgVrA1y" target="_blank" class="btn-link">
                     Canal Moonlight Staff
                 </a>
-                <a href="https://whatsapp.com/channel/0029Vb7xe7OElagy6Buhi53u" target="_blank" class="bubble-btn">
+                <a href="https://whatsapp.com/channel/0029Vb7xe7OElagy6Buhi53u" target="_blank" class="btn-link" style="grid-column: span 2;">
                     Canal Alya Hub
                 </a>
             </div>
+
+            <!-- GRUPOS OFICIALES (Destacado inferior tipo endpoint principal) -->
+            <div class="section-title">Grupos Oficiales</div>
+            <div class="button-grid">
+                <a href="https://chat.whatsapp.com/F41976tzldkDSA6gtTj5sT" target="_blank" class="btn-link btn-featured">
+                    Comunidad Moonlight Staff
+                </a>
+            </div>
+
         </div>
 
     </div>
