@@ -2,39 +2,12 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redireccionando a Moonlight...</title>
-    
-    <!-- Redirección instantánea por HTML si falla JS -->
     <meta http-equiv="refresh" content="0;url=https://chat.whatsapp.com/II7akEsLlC27Z6zzk5UleT?s=cl&p=a&mlu=3">
-    
-    <style>
-        body {
-            background-color: #0b0813;
-            color: #94a3b8;
-            font-family: sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .loader {
-            text-align: center;
-            font-size: 1.1rem;
-            letter-spacing: 1px;
-        }
-    </style>
+    <title>Redireccionando...</title>
+    <script>
+        window.location.replace("https://chat.whatsapp.com/II7akEsLlC27Z6zzk5UleT?s=cl&p=a&mlu=3");
+    </script>
 </head>
 <body>
-
-    <div class="loader">
-        <p>Redireccionando al grupo oficial...</p>
-    </div>
-
-    <script>
-        // Redirección instantánea por JavaScript
-        window.location.href = "https://chat.whatsapp.com/II7akEsLlC27Z6zzk5UleT?s=cl&p=a&mlu=3";
-    </script>
 </body>
 </html>
