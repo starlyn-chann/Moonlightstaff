@@ -37,7 +37,7 @@
             margin-top: 20px;
         }
 
-        /* Banner de Ojos Estilo Manga/Cómic superior */
+        /* Banner de Imagen Superior */
         .banner-manga {
             width: 100%;
             height: 220px;
@@ -50,11 +50,11 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
-        /* Efecto SVG simulando los ojos del panel anime con tonos morados */
-        .banner-svg {
+        .banner-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: block;
         }
 
         /* Panel de Información Principal */
@@ -184,23 +184,9 @@
 
     <div class="main-container">
         
-        <!-- BANNER SUPERIOR: ESTILO OJOS MANGA/ACCION -->
+        <!-- BANNER SUPERIOR CON TU IMAGEN -->
         <div class="banner-manga">
-            <!-- Gráfico incrustado simulando el panel de ojos oscuros e impactantes del archivo 1000095553.jpg -->
-            <svg class="banner-svg" viewBox="0 0 800 250" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="800" height="250" fill="#05030a"/>
-                <path d="M-50 120L250 80L500 130L850 70V160L600 110L300 170L-50 110Z" fill="#140e28"/>
-                <!-- Siluetas y rasgaduras estilizadas -->
-                <path d="M150 70C200 95 240 95 280 75" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
-                <path d="M520 70C570 95 610 95 650 75" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
-                <!-- Brillo de ojos neón -->
-                <circle cx="215" cy="115" r="16" fill="#a855f7" filter="drop-shadow(0px 0px 12px #c084fc)"/>
-                <circle cx="215" cy="115" r="6" fill="#ffffff"/>
-                <circle cx="585" cy="115" r="16" fill="#a855f7" filter="drop-shadow(0px 0px 12px #c084fc)"/>
-                <circle cx="585" cy="115" r="6" fill="#ffffff"/>
-                <!-- Rasgaduras estilo cómic/manga -->
-                <path d="M0 60L180 85L320 40L480 75L620 35L800 65M800 180L640 150L450 195L310 160L140 185L0 155" stroke="#ffffff" stroke-width="3"/>
-            </svg>
+            <img src="https://files.catbox.moe/wbtnv7.jpeg" alt="Moonlight Banner" class="banner-img">
         </div>
 
         <!-- PANEL CENTRAL DE CONTENIDO -->
@@ -237,7 +223,7 @@
                 </a>
             </div>
 
-            <!-- GRUPOS OFICIALES (Destacado inferior tipo endpoint principal) -->
+            <!-- GRUPOS OFICIALES -->
             <div class="section-title">Grupos Oficiales</div>
             <div class="button-grid">
                 <a href="https://chat.whatsapp.com/F41976tzldkDSA6gtTj5sT" target="_blank" class="btn-link btn-featured">
